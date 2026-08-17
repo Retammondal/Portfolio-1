@@ -1,10 +1,10 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 @theme {
-    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-    --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+    --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Libertinus Serif', ui-serif, Georgia, serif;
     --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
 }
 
@@ -14,6 +14,7 @@
     --surface-card: rgba(22, 22, 22, 0.75);
     --surface-solid: #181818;
     --surface-code: #141414;
+    --navbar-bg: rgba(15, 15, 15, 0.82);
 
 
     --text-1: #eeeeee;
@@ -31,10 +32,9 @@
     --accent-border: rgba(251, 191, 36, 0.22);
 
 
-    --navbar-bg: rgba(15, 15, 15, 0.82);
 }
 
-
+/* Point: Neglecting Color Theme changes now.. */
 /* @media (prefers-color-scheme: light) {
     :root {
         --surface: #f7f6f3;
@@ -70,25 +70,216 @@
 
 
     body {
+        /* Important -- for text to look professional */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
         background-color: var(--surface);
         color: var(--text-1);
+        /* The transition is for Dark Mode Toggle -- we dont need it though */
         transition: background-color 0.25s ease, color 0.25s ease;
     }
 
-
-    header,
-    section,
-    article,
-    aside,
-    footer,
-    nav {
-        transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    /* The transition is for Dark Mode Toggle -- we dont need it though */
+        header,
+        section,
+        article,
+        aside,
+        footer,
+        nav {
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+        }
+        /* Why going into section b/c dont want main header to be capped width  */
+    header>section{
+        max-width: 1250px;
+        margin: 0 auto; 
+        padding: 0px clamp(20px, 4vw, 40px);
     }
-}
+    footer,
+    main>section{
+        max-width: 1200px;
+        margin: 0px auto;
+        padding: 0px clamp(20px, 4vw, 40px);  
+    }
+        @media (max-width: 1023px) {
+            main #first-section-main {
+                padding-top: 80px;
+                padding-bottom: 32px;
+            }    
+        }
 
-/* Cursor Property  */
+        @media (min-width: 1024px) {
+            main #first-section-main {
+                padding-top: 50px;
+                padding-bottom: 32px;
+            } 
+        }
+
+
+    /* making the headings font serif */
+    h1,h2,h3{
+        font-family: var(--font-serif);
+    }
+    p{
+        font-family: var(--font-sans);
+    }
+
+
+    /* Animation Portion */
+    /* Animation : The Staggered Fade-Up Sequence */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(22px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out both;
+    }
+
+    .animate-fade-in-up-1 {
+        animation: fadeInUp 0.6s ease-out 0.15s both;
+    }
+
+    .animate-fade-in-up-2 {
+        animation: fadeInUp 0.6s ease-out 0.30s both;
+    }
+
+    .animate-fade-in-up-3 {
+        animation: fadeInUp 0.6s ease-out 0.45s both;
+    }
+
+
+
+
+
+
+
+
+    /* Animation : The Sliding Underline Reveal */
+    /* Create the invisible underline layer */
+    .sliding-underline {
+    position: relative;
+    text-decoration: none; /* Removes the default browser underline */
+    }
+
+    .sliding-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor; 
+    
+    transform: scaleX(0);
+    transform-origin: bottom left; /* Anchors the line to the left side */
+    transition: transform 0.2s ease-out;
+    }
+
+    .sliding-underline:hover::after {
+    transform: scaleX(1);
+    }
+
+    /* Animation : The Scroll-Driven Reading Progress Bar */
+    .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    z-index: 999;
+    background: var(--accent);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    animation: grow-progress linear;
+    animation-timeline: scroll();
+    }
+
+    @keyframes grow-progress {
+    to { transform: scaleX(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+    /* Disables the scroll-linked animation so the progress bar remains hidden instead of growing as the page is scrolled. */
+    .progress-bar {
+        animation: none;
+    }
+    }
+
+
+    /* Animation : The Spinning Glowing Gradient Border */
+    @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+    }
+
+
+    .glow-card {
+    position: relative;
+    /* background-color: black; */
+    /*color: white;*/
+    border: transparent; 
+    }
+
+    /* The Border & The Glow (The Background Layers) */
+    .glow-card::after,
+    .glow-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1; 
+    
+    /* Make them slightly larger than the card */
+    height: calc(100% + 3px); 
+    width: calc(100% + 3px);
+    
+    /* The Perfect Center (Splits the extra 5px evenly on all sides) */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    
+    border-radius: inherit; /* Ensures the glow matches the card's rounded corners */
+    
+    /* The Sweeping Gradient */
+    background-image: conic-gradient(from var(--angle), transparent 50%, var(--accent));
+    animation: spin-border 3s linear infinite;
+    }
+
+    /* The Soft Aura (Differentiating the glow from the sharp border) */
+    .glow-card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+    }
+
+    /* The Rotation Animation */
+    @keyframes spin-border {
+    from { --angle: 0deg; }
+    to   { --angle: 360deg; }
+    }
+  
+
+}
+    /* Specially for Open to Opportunities  */
+    #opportunities .glow-card::after,
+    #opportunities .glow-card::before{
+        height: calc(100% + 0.5px);
+        width: calc(100% + 0.5px);
+        background-image: conic-gradient(from var(--angle), transparent 80%,#4ade80);
+    }
+    #opportunities .glow-card::before {
+    filter: blur(1rem);
+    opacity: 0.3;
+    }
+
+/* IMPORTANT -- Cursor Property  */
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -113,86 +304,21 @@
 }
 
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(22px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-.animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out both;
-}
-
-.animate-fade-in-up-1 {
-    animation: fadeInUp 0.6s ease-out 0.15s both;
-}
-
-
-
-
-
-
-.animate-fade-in-up-2 {
-    animation: fadeInUp 0.6s ease-out 0.30s both;
-}
-
-.animate-fade-in-up-3 {
-    animation: fadeInUp 0.6s ease-out 0.45s both;
-}
-
-
-
-
-/* body{
-    max-width: 1200px;
-    margin: 0px auto;
-} */
-
-footer,
-main>section{
-    max-width: 1200px;
-    margin: 0px auto;
-    padding: 0px clamp(20px, 4vw, 40px);  
-}
-header>div{
-    padding: 0px clamp(20px, 4vw, 40px);
-}
-
-h1,h2,h3{
-    font-family: var(--font-serif);
-}
-
-
-
-/* Important */
-/* Create the invisible underline layer */
-.animated-link {
-  position: relative;
-}
-.animated-link::after {
-  content: '';
+.gradient-background {
+  background: transparent;
+  border-radius: 50%;
+  background-color: #facc1515;
+  background: radial-gradient(circle , #facc1510);
+  filter: blur(5rem);
   position: absolute;
-  width: 100%;
-  height: 2px;          /* Thickness of the line */
-  bottom: -2px;         /* Distance below the text */
-  left: 0;
-  background-color: currentColor; /* Matches the text color automatically */
-  
-  /* Animation Setup */
-  transform: scaleX(0);
-  transform-origin: bottom right; /* Forces it to start from the left side */
-  transition: transform 0.3s ease-out; /* Controls speed and smoothness */
+    top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
-/* Trigger the expansion on hover */
-.animated-link:hover::after {
-  transform: scaleX(1);
+/* Important - Given for 1st page height related problem */
+@media (max-height: 1300px) {
+  main > section:first-child{
+      min-height: 100vh; /* Runs only from 0px up to 860px */
+    } 
 }
-/* -- Important */

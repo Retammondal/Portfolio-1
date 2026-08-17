@@ -5,52 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retam Mondal-Full Stack Developer</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="icon" type="image/svg+xml" href="Images/logo.svg"> #Favicon
 </head>
+
 <body>
-<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg border-b border-(--border-subtle) ">
-    <div class="max-w-[1250px] mx-auto flex justify-between h-15 items-center">
-        <h1><a href="index.html">Retam Mondal</a></h1>
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-(--navbar-bg) border-b border-(--border)">
+    <section class="flex justify-between items-center h-15">
+        <!-- text-blur class edited in input css  -->
+        <h1><a href="index.html" class="uppercase">Retam Mondal</a></h1>
         <nav>
             <ul class="hidden md:flex gap-5 text-sm text-(--text-3)">
-                <li class="cursor-pointer hover:text-(--text-1) transition-all duration-200"><a href="#tech-stack">Stack</a></li>
-                <li class="cursor-pointer hover:text-(--text-1) transition-all duration-200"><a href="#projects">Projects</a></li>
-                <li class="cursor-pointer hover:text-(--text-1) transition-all duration-200"><a href="#experience">Experience</a></li>
-                <li class="cursor-pointer hover:text-(--text-1) transition-all duration-200"><a href="#contact">Contact</a></li>
+                <li class="cursor-pointer hover:text-(--accent) sliding-underline transition-colors duration-200"><a href="#tech-stack">Stack</a></li>
+                <li class="cursor-pointer hover:text-(--accent) sliding-underline transition-colors duration-200"><a href="#projects">Projects</a></li>
+                <li class="cursor-pointer hover:text-(--accent) sliding-underline transition-colors duration-200"><a href="#experience">Experience</a></li>
+                <li class="cursor-pointer hover:text-(--accent) sliding-underline transition-colors duration-200"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="blog.html" class="hidden md:flex items-center gap-1.5 text-(--accent) border border-(--accent-border) px-4 py-1.5 rounded-full hover:bg-(--accent-dim) hover:border-(--accent) transition-all duration-200">Read Blog 
+        <a href="blog.html" class="flex items-center justify-center gap-1.5 text-sm md:text-base text-(--accent) border border-(--accent-border) px-4 py-1.5 rounded-full hover:bg-(--accent-dim) hover:border-(--accent) transition duration-200 ease-out hover:scale-105">Read Blog 
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
         </a>
-    </div>
+    </section>
 </header>
 
 <main>
-<!-- Imp : In Section Margin and padding will not work due to Input.css -->
+<!-- Imp : In each section i have given padding left and right in input.css -->
+    <!-- Specially given the first section padding top/buttom in input.css  -->
     <!-- Retam Mondal Section -->
-    <section style="padding-top: 80px ; padding-bottom: 40px;"
-        class="min-h-screen flex flex-col-reverse justify-center lg:flex-row lg:justify-between">
+<section class="flex flex-col justify-center">
+    <section id="first-section-main"
+        class="flex flex-col-reverse justify-center lg:flex-row lg:justify-between">
         <!-- Left Container -->
-        <div class="flex flex-col justify-center items-center lg:items-start mt-10">
+        <div id="opportunities" class="flex flex-col justify-start items-center lg:items-start mt-10 relative">
+            <div class="gradient-background h-full aspect-square max-w-full"></div>
             <!-- Open to new opportunity  -->
-            <div class="inline-flex items-center gap-2 border border-(--border) px-4 py-1.5 rounded-full mb-8 animate-fade-in-up">
-                <span class="inline-block h-2 w-4 bg-green-400 rounded-full animate-pulse "></span>
-                <p class="text-sm text-(--text-3)">Open to New Opportunities</p>
+            <div class="animate-fade-in-up mb-8">
+                <div  class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-card bg-(--surface-solid)">
+                    <span class="inline-block h-2 w-4 bg-green-400 rounded-full animate-pulse "></span>
+                    <p class="text-sm text-(--text-3)">Open to New Opportunities</p>
+                </div>
             </div>
         
             <!-- Retam + Description  -->
-            <div class="mb-7 animate-fade-in-up">
-                <h1 class="text-6xl md:text-8xl lg:text-[7rem] font-bold mb-6 text-center lg:text-start">
-                    <p>Retam</p>
-                    <p class="text-(--text-4)">Mondal</p>
+            <div class="mb-10 animate-fade-in-up">
+                <h1 class="text-5xl md:text-6xl mb-10 text-center lg:text-start leading-tight">
+                    <p class="font-serif">Architecting <br> Scalable Code &</p>
+                    <p class="font-serif text-(--accent)">Applied AI</p>
                 </h1>
-        
-                <p class="text-lg md:text-xl text-(--text-2) leading-relaxed max-w-xl text-center lg:text-left">I build thoughtful, performant web
-                    products - from pixel-perfect interfaces to scalable backend systems.
-                    Based in India.</p>
+            
+                <p class="text-base md:text-lg text-(--text-2) leading-relaxed max-w-xl text-center lg:text-left">Full-Stack Developer, Python specialist, and quantitative finance enthusiast based in India. Crafting ultra-low latency backends, intelligent LLM pipelines, and razor-sharp interfaces.</p>
             </div>
         
             <!-- View Projects + Get in Touch -->
-            <div class="flex flex-wrap justify-center gap-4 pb-10 lg:pb-20 animate-fade-in-up-1">
+            <div class="flex flex-wrap justify-center gap-4 pb-10 lg:pb-10 animate-fade-in-up-1">
         
                 <a href="#projects"
                     class="w-37 group relative overflow-hidden flex items-center justify-center py-2 gap-2 rounded-full bg-amber-400  text-sm font-medium text-black">
@@ -76,35 +82,40 @@
             </div>
 
             
-            <!-- 5+ years experience  -->
-            <div class="pt-7 flex w-full max-w-[300px] md:max-w-[400px] border-t border-(--border) animate-fade-in-up-2">
-                <!-- Item 1 -->
-                <div class="flex-1 text-center">
-                    <p class="text-3xl md:text-4xl lg:text-4xl font-bold text-(--text-1)">5+</p>
-                    <p class="text-xs md:text-sm text-(--text-3) mt-1">Years exp.</p>
-                </div>
-        
-                <!-- Item 2 -->
-                <div class="flex-1 text-center">
-                    <p class="text-3xl md:text-4xl lg:text-4xl font-bold text-(--text-1)">40+</p>
-                    <p class="text-xs md:text-sm text-(--text-3) mt-1">Projects</p>
-                </div>
-        
-                <!-- Item 3 -->
-                <div class="flex-1 text-center">
-                    <p class="text-3xl md:text-4xl lg:text-4xl font-bold text-(--text-1)">12+</p>
-                    <p class="text-xs md:text-sm text-(--text-3) mt-1">Clients</p>
-                </div>
-            </div>
+
         </div>
 
         <!-- Right Container  -->
         <div class="flex items-center justify-center animate-fade-in-up">
-        <figure class="rounded-full lg:rounded-r-sm lg:max-w-x overflow-hidden w-[250px] lg:w-[350px]">
-            <img src="Images/Profile Pic.jpeg" alt="">
+        <figure class="rounded-full bg-transparent border-(--text-4) lg:max-w-x w-[250px] lg:w-[380px] glow-card">
+            <img src="Images/Profile Pic.jpeg" alt="" class="rounded-full">
         </figure>
         </div>
     </section>
+
+    <section class="w-full">
+            <!-- 5+ years experience  -->
+        <div class=" flex justify-center items-center pt-8 pb-8 gap-10 md:gap-30 border-t border-(--border) animate-fade-in-up-2">
+            <!-- Item 1 -->
+            <div class="text-center">
+                <p class="text-3xl md:text-4xl lg:text-4xl font-bold text-(--text-1)">5+</p>
+                <p class="text-xs md:text-sm text-(--text-3) mt-1">Years exp.</p>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="text-center">
+                <p class="text-3xl md:text-4xl lg:text-4xl font-bold text-(--text-1)">40+</p>
+                <p class="text-xs md:text-sm text-(--text-3) mt-1">Projects</p>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="text-center">
+                <p class="text-3xl md:text-4xl lg:text-4xl font-bold text-(--text-1)">12+</p>
+                <p class="text-xs md:text-sm text-(--text-3) mt-1">Clients</p>
+            </div>
+        </div>
+    </section>
+</section>
 
 <div class="border-b border-(--border-subtle)"></div>
 

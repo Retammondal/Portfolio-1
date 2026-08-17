@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+
+</head>
+<body>
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg border-b border-(--border-subtle) ">
+    <div class="max-w-[1250px] mx-auto flex justify-between h-15 items-center">
+        <a href="index.html" class="flex gap-2 items-center text-(--text-3) hover:text-(--text-1) text-m transition-all duration-200 animated-link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
+            Portfolio
+        </a>
+        <h1><a href="index.html">Retam Mondal</a></h1>
+    </div>
+</header>
+<main>
+    <!-- Progress Bar Animation at page top  -->
+    <div class="progress-bar"></div>
+    <!-- Section for Heading -->
+    <section style="padding-top: 120px ; padding-bottom: 50px;" class="border-b border-(--border-subtle)">
+        <!-- Devops  -->
+        <div class="flex gap-8 justify-start items-center">
+            <span class="inline-block px-3 py-1 rounded-full text-xs text-(--accent) font-bold border bg-(--accent-dim) border-amber-400 tracking-wide">DevOps</span>
+            <!-- Important -- Marker, Tracking  -->
+            <ul class="list-disc flex justify-start items-center gap-6 text-xs marker:text-[8px] text-(--text-4)">
+                <li>7 min read</li>
+                <li>Beginner Friendly</li>
+            </ul>
+        </div>
+        <!-- Header  -->
+        <div>
+            <!-- Important -- Leading, tracking  -->
+            <h1 class="text-4xl md:text-5xl py-6 font-serif font-bold leading-tight tracking-tight max-w-[600px]">
+                Docker Explained:<br> Why Every Developer Should Learn Containers</h1>
+            <p class="text-lg leading-relaxed font-light max-w-[700px]">If you've ever heard "it works on my machine" - Docker is the fix. Here's everything you need to know to get started, explained simply.</p>
+        </div>
+        <!-- Retam Mondal -->
+        <div class="flex gap-6 pt-7">
+            <span class="border border-(--accent-border) bg-(--accent-dim) font-bold text-(--accent) text-sm rounded-full w-9 h-9 flex items-center justify-center">RM</span>
+            <div>
+                <p class="text-sm">Retam Mondal</p>
+                <p class="text-xs text-(--text-4)">August 11, 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Writing -->
+    <section style="padding-top: 20px ; padding-bottom: 50px;" class="flex gap-10">
+        <aside class="lg:w-1/5 mt-5 stretch-0 hidden lg:block">
+            <!-- Sticky concept is understood wrong -->
+            <div class="text-(--text-4) sticky top-24">
+                <p class="text-base uppercase tracking-widest mb-4">Contents</p>
+                <ol class="text-base flex flex-col gap-3 list-decimal list-inside">
+                    <li class="hover:text-(--accent) cursor-pointer"><a href="#the-problem" class="animated-link">The Problem</a></li>
+                    <li class="hover:text-(--accent) cursor-pointer"><a href="#what-is-docker" class="animated-link">What is Docker?</a></li>
+                    <li class="hover:text-(--accent) cursor-pointer"><a href="#container-vs-vm" class="animated-link">Container vs VMs</a></li>
+                    <li class="hover:text-(--accent) cursor-pointer"><a href="#key-concepts" class="animated-link">Key Concepts</a></li>
+                    <li class="hover:text-(--accent) cursor-pointer"><a href="#docker-compose" class="animated-link">Docker Compose</a></li>
+                    <li class="hover:text-(--accent) cursor-pointer"><a href="#why-docker-compose" class="animated-link">Why teams love Docker?</a></li>
+                    <li class="hover:text-(--accent) cursor-pointer"><a href="#where-to-start" class="animated-link">Where to Start?</a></li>
+                </ol>
+            </div>
+        </aside>
+
+        <article class="lg:w-4/5">
+            <!-- Important -- Scroll-mt-24  -->
+            <p id="the-problem" class="scroll-mt-24 text-(--text-2) leading-8 text-base md:text-lg mt-5">Picture this: you spend two days building a feature on your laptop. Tests pass. Everything works. You push the code, your teammate pulls it down - and nothing runs. Error messages everywhere. Hours of debugging later, you discover the issue: different Node.js versions, a missing environment variable, or a system dependency that only exists on your machine.</p>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">This problem is so common in software development that it has its own sarcastic phrase. Developers call it the "works on my machine" syndrome - and it has wasted more hours of developer time than almost anything else in the industry.</p>
+            <blockquote class="border-l-2 border-(--accent) text-(--text-2) text-base md:text-lg leading-8 pl-6 py-1 mt-8">
+                "It works on my machine" is not a solution. Docker makes it so the machine doesn't matter at all.""
+            </blockquote>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">Docker was created to solve exactly this problem. And it does it so well that it's now one of the most widely used tools in all of software development - from small startups to Google-scale companies.</p>
+
+            <h2 id="what-is-docker" class="scroll-mt-24 text-2xl md:text-3xl font-serif font-bold text-(--text-1) mt-10 pb-3 border-b border-(--border)">
+                What Exactly Is Docker?
+            </h2>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">Docker is a platform that lets you package your application - along with everything it needs to run - into a single, portable unit called a <span class="text-(--text-1)">container</span>.</p>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">Think of it like a lunchbox. Instead of telling someone "go to the store, buy bread, find mustard, and oh by the way you need a specific brand of knife" - you just hand them the lunchbox. Everything they need is already inside, pre-packed, and ready to go. No assembly required.</p>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">That lunchbox runs the same way whether you open it on your laptop, your teammate's Windows PC, a server in Germany, or a cloud machine in Singapore. The contents - and how they behave - are always identical.</p>
+
+            <h2 id="container-vs-vm" class="scroll-mt-24 text-2xl md:text-3xl font-serif font-bold text-(--text-1) mt-10 pb-3 border-b border-(--border)">
+                Containers vs Virtual Machines
+            </h2>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">Before Docker, the standard answer to "I need an isolated environment" was a <span class="text-(--text-1)">Virtual Machine (VM)</span>. VMs work - but they're heavy. Each VM runs an entire operating system on top of your operating system. They take minutes to boot, eat up gigabytes of RAM, and feel sluggish.</p>
+            
+            <!-- Virtual machine + Docker  -->
+            <div class="flex flex-col gap-4 md:flex-row mt-5">
+                <div class="flex-1 bg-(--surface-solid) border border-(--border) hover:border-[0.2px] hover:border-red-300 transition-all duration-200 rounded-xl p-5">
+                    <div class="flex gap-2 items-center mb-3">
+                        <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                        <p class="text-sm lg:text-base font-semibold text-(--text-1)">Virtual Machine</p>
+                    </div>
+                    <!-- Important -- space-y-2  -->
+                    <ul class="list-disc list-inside text-xs lg:text-sm text-(--text-3) leading-5 space-y-2 pl-0.5">
+                        <li class="flex gap-2 items-center">
+                            <span class="w-1 h-1 rounded-full bg-(--text-4)"></span>
+                            <span>Full OS inside every VM (gigabytes)</span>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <span class="w-1 h-1 rounded-full bg-(--text-4)"></span>
+                            <span>Takes minutes to start</span>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <span class="w-1 h-1 rounded-full bg-(--text-4)"></span>
+                            <span>Heavy on RAM and CPU</span>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <span class="w-1 h-1 rounded-full bg-(--text-4)"></span>
+                            <span>Hard to share and version control</span>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="flex-1 bg-(--surface-solid) border border-(--accent-border) hover:border-[0.2px] hover:border-green-300 transition-all duration-200 rounded-xl p-5">
+                    <div class="flex gap-2 items-center mb-3">
+                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <p class="text-sm lg:text-base font-semibold text-(--text-1)">Docker Container</p>
+                    </div>
+                    <!-- Important -- space-y-2  -->
+                    <ul class="list-disc list-inside text-xs lg:text-sm text-(--text-3) leading-5 space-y-2 pl-0.5">
+                        <li class="flex gap-2 items-center">
+                            <span class="text-(--accent)">✔</span>
+                            <span>Shares your OS kernel (megabytes)</span>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <span class="text-(--accent)">✔</span>
+                            <span>Starts in under a second</span>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <span class="text-(--accent)">✔</span>
+                            <span>Lightweight and efficient</span>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <span class="text-(--accent)">✔</span>
+                            <span>Easy to share via Docker Hub</span>
+                        </li>
+   
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">Containers are so lightweight that you can run dozens of them on a single laptop simultaneously, each completely isolated from the others. This was simply not practical with virtual machines.</p>
+
+            <h2 id="key-concepts" class="scroll-mt-24 text-2xl md:text-3xl font-serif font-bold text-(--text-1) mt-10 pb-3 border-b border-(--border)">
+                The Four Concepts You Need to Know
+            </h2>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">Docker has its own vocabulary. Once you understand these four terms, everything else clicks into place.</p>
+
+            <!-- Four Concepts blocks -->
+            <div>
+                <div class="flex gap-5 p-5 border border-(--accent-border) rounded-xl mt-10">
+                    <!-- Each Container  -->
+                    <!-- Important -- use h,w rather than padding  -->
+                    <div class="w-10 h-10 shrink-0 flex items-center justify-center border bg-(--accent-dim) rounded-xl border-(--accent-border) text-(--accent) font-mono font-bold text-sm">01</div>
+                    <div>
+                        <p class="text-(--text-1) mb-1.5 font-semibold">Image</p>
+                        <p class="text-sm leading-relaxed text-(--text-3)">An image is the blueprint. It's a read-only template that describes exactly what should be inside a container - the operating system, the installed packages, your application code, and the startup commands. Think of it like a recipe. The recipe itself doesn't cook the food, but it tells you exactly how to.</p>
+                    </div>
+                </div>
+                <!-- Container  -->
+                <div class="flex gap-5 p-5 border border-(--accent-border) rounded-xl mt-5">
+                    <!-- Each Container  -->
+                    <!-- Important -- use h,w rather than padding  -->
+                    <div class="w-10 h-10 shrink-0 flex items-center justify-center border bg-(--accent-dim) rounded-xl border-(--accent-border) text-(--accent) font-mono font-bold text-sm">02</div>
+                    <div>
+                        <p class="text-(--text-1) mb-1.5 font-semibold">Container</p>
+                        <p class="text-sm leading-relaxed text-(--text-3)">A container is a running instance of an image. Following our recipe analogy: if an image is the recipe, a container is the actual cooked meal. You can spin up multiple containers from the same image, each completely independent of the others. Start them, stop them, delete them - the image remains untouched.</p>
+                    </div>
+                </div>
+                <!-- Dockerfile -->
+                <div class="flex gap-5 p-5 border border-(--accent-border) rounded-xl mt-5">
+                    <!-- Each Container  -->
+                    <!-- Important -- use h,w rather than padding  -->
+                    <div class="w-10 h-10 shrink-0 flex items-center justify-center border bg-(--accent-dim) rounded-xl border-(--accent-border) text-(--accent) font-mono font-bold text-sm">03</div>
+                    <div>
+                        <p class="text-(--text-1) mb-1.5 font-semibold">DockerFile</p>
+                        <p class="text-sm leading-relaxed text-(--text-3)">A Dockerfile is a plain text file where you write the instructions to build your image. It lives in your project folder alongside your code and can be committed to Git like any other file. This is what makes Docker so powerful - your environment becomes code. Reviewable, versioned, reproducible.</p>
+                    </div>
+                </div>
+                <!-- DockerHub -->
+                <div class="flex gap-5 p-5 border border-(--accent-border) rounded-xl mt-5">
+                    <!-- Each Container  -->
+                    <!-- Important -- use h,w rather than padding  -->
+                    <div class="w-10 h-10 shrink-0 flex items-center justify-center border bg-(--accent-dim) rounded-xl border-(--accent-border) text-(--accent) font-mono font-bold text-sm">04</div>
+                    <div>
+                        <p class="text-(--text-1) mb-1.5 font-semibold">DockerHub</p>
+                        <p class="text-sm leading-relaxed text-(--text-3)">Docker Hub is like GitHub, but for Docker images. It's a public registry where you can push your images so others can pull and run them. It also hosts thousands of official images for popular tools - Node.js, PostgreSQL, Redis, Nginx - pre-built and ready to use in your project within seconds.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="docker-compose" class="scroll-mt-24 text-2xl md:text-3xl font-serif font-bold text-(--text-1) mt-10 pb-3 border-b border-(--border)">
+                Docker Compose: When One Container Isn't Enough
+            </h2>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">Real applications are rarely just one thing. A typical web app has a backend server, a database, a cache, maybe a background job worker, and a reverse proxy. That's five separate services, each needing its own environment.</p>            
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5"><span class="text-(--text-1) font-semibold">Docker Compose</span> solves this. It lets you define all your services in a single configuration file. With one command, you can start your entire application stack - database included - in seconds. With another command, you can tear the whole thing down.</p>
+            
+            <!-- Example a typical web stack  -->
+            <div class="flex-1 bg-(--surface-solid) border border-(--border) hover:border-[0.2px] hover:border-red-300 transition-all duration-200 rounded-xl p-5 mt-5">
+                <p class="text-(--text-4) mb-3.5 font-semibold uppercase text-sm lg:text-m">
+                    Example: A Typical web stack
+                </p>
+ 
+                <!-- Important -- space-y-2  -->
+                <ul class="list-disc list-inside text-sm lg:text-m text-(--text-2) leading-5 space-y-2.5 pl-0.5 pb-4 border-b border-(--border)">
+                    <li class="flex gap-2 items-center">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span><span class="text-(--text-1) font-bold">api - </span>Your Node.js or Python backend</span>
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <span><span class="text-(--text-1) font-bold">db - </span> PostgreSQL database</span>
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                        <span><span class="text-(--text-1) font-bold">cache - </span> Redis for fast data access</span>
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        <span><span class="text-(--text-1) font-bold">nginx - </span>Reverse proxy and static file server</span>
+                    </li>
+                </ul>
+                <p class="text-(--text-4) mt-3.5 text-sm lg:text-m">
+                    All four containers - with proper networking between them - spun up with a single command. Shut down cleanly with another. Every developer on the team gets the exact same setup.
+                </p>
+                
+            </div>
+
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5">For local development especially, Docker Compose is a game-changer. New teammates can clone the repo, run one command, and have the full environment running on their machine in under a minute - regardless of what OS they're using.</p>
+
+            <!-- Why Teams love docker  -->
+            <h2 id="why-docker-compose" class="scroll-mt-24 text-2xl md:text-3xl font-serif font-bold text-(--text-1) mt-10 pb-3 border-b border-(--border)">
+                Where Should You Start?
+            </h2>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5 mb-5">Docker has been adopted so widely because it solves problems at every stage of the software lifecycle - not just development.</p>
+            <ul class="list-none text-(--text-3)">
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-2 h-2 shrink-0 bg-(--accent) rounded-full mt-2"></div>
+                    <p><span class="text-(--text-1) font-semibold">Consistent environments everywhere.</span> Development, testing, staging, production - they all run the same container. The gap between "it works locally" and "it crashes in production" shrinks dramatically.</p>
+                </li>
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-2 h-2 shrink-0 bg-(--accent) rounded-full mt-2"></div>
+                    <p><span class="text-(--text-1) font-semibold">Faster Onboarding.</span> "Clone, run one command, done" onboarding is a reality with Docker. No more three-page setup guides that are outdated anyway. New team members are productive from day one.</p>
+                </li>
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-2 h-2 shrink-0 bg-(--accent) rounded-full mt-2"></div>
+                    <p><span class="text-(--text-1) font-semibold">Easy Scaling.</span> Because every container is isolated and stateless, spinning up 10 more instances of your API to handle traffic is straightforward. This is the foundation of modern cloud architecture.</p>
+                </li>
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-2 h-2 shrink-0 bg-(--accent) rounded-full mt-2"></div>
+                    <p><span class="text-(--text-1) font-semibold">Works with Everything.</span> Docker doesn't care what language or framework you're using. Node.js, Python, Go, Java, PHP - if it can run on Linux, it can run in a Docker container.</p>
+                </li>
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-2 h-2 shrink-0 bg-(--accent) rounded-full mt-2"></div>
+                    <p><span class="text-(--text-1) font-semibold">Gateway to Kubernetes.</span> Once you understand Docker, you're ready to learn Kubernetes - the industry-standard system for managing containers at scale. Docker is step one of that journey.</p>
+                </li>
+            </ul>   
+
+            <!-- Where should we start  -->
+            <h2 id="where-to-start" class="scroll-mt-24 text-2xl md:text-3xl font-serif font-bold text-(--text-1) mt-10 pb-3 border-b border-(--border)">
+                Why Teams Love Docker
+            </h2>
+            <p class="text-(--text-3) leading-8 text-base md:text-lg mt-5 mb-5">If you're a beginner, don't try to learn everything at once. Here's a simple, progressive path:</p>
+            <ol class="list-none text-(--text-3)">
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-6 h-6 shrink-0 text-xs bg-(--surface-solid) border border-(--border) flex items-center justify-center rounded-full mt-0.5">1</div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-(--text-1) font-semibold">Install Docker Desktop</p> 
+                        <p>Available for Mac, Windows, and Linux. It includes everything you need - the Docker engine, CLI, and a GUI dashboard. Download it from the official Docker website.</p>
+                    </div>
+                </li>
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-6 h-6 shrink-0 text-xs bg-(--surface-solid) border border-(--border) flex items-center justify-center rounded-full mt-0.5">2</div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-(--text-1) font-semibold">Run your first container</p> 
+                        <p>Pull an official image from Docker Hub and run it. Try running a PostgreSQL or Redis container locally instead of installing them on your machine. This shows you the power of Docker immediately.</p>
+                    </div>
+                </li>
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-6 h-6 shrink-0 text-xs bg-(--surface-solid) border border-(--border) flex items-center justify-center rounded-full mt-0.5">3</div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-(--text-1) font-semibold">Write a Dockerfile for your project</p> 
+                        <p>Pick a small project you've already built and try containerizing it. Writing your first Dockerfile will teach you more than any tutorial - by building it, you'll understand what each piece does.</p>
+                    </div>
+                </li>
+                <li class="flex justify-center gap-4 mt-3">
+                    <div class="w-6 h-6 shrink-0 text-xs bg-(--surface-solid) border border-(--border) flex items-center justify-center rounded-full mt-0.5">4</div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-(--text-1) font-semibold">Learn Docker Compose</p> 
+                        <p>Once you're comfortable with single containers, add a Compose file to manage multiple services together. This is what most real development workflows look like.</p>
+                    </div>
+                </li>
+
+            </ol>  
+
+            <div class="bg-(--accent-dim) border border-(--accent-border) hover:border-[0.2px] hover:border-(--accent) transition-all duration-300 cursor-help rounded-xl p-5 mt-8">
+            
+                <p class="text-(--accent) text-sm lg:text-m">
+                    <span class="font-bold">My honest take:</span> Docker has one of the steepest initial learning curves in web development - but it's short. Once it clicks, usually after one or two real projects, you'll wonder how you ever worked without it. It's worth every hour of confusion.
+                </p>
+            
+            </div>
+
+            <div class="border border-(--border-subtle) mt-8 lg:mt-14"></div>
+
+            <!-- Back to Portfolio  -->
+            <div class="flex justify-between items-center mt-6">
+                <a href="index.html" class="flex gap-2 items-center text-(--text-3) hover:text-(--accent) text-m transition-all duration-200 animated-link">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+                    </svg>
+                    Portfolio
+                </a>
+                <span class="text-xs text-(--text-3)">Aug 1, 2026</span>
+            </div>
+        </article>
+    </section>
+
+    
+<div class="border-b border-(--border-subtle)"></div>
+</main>
+    <footer style="padding-top: 32px;padding-bottom: 32px;" class="flex items-center justify-center">
+        <p class="max-w-6xl text-xs text-(--text-4)">© 2026 Retam Mondal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

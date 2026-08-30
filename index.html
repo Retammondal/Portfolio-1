@@ -6,6 +6,8 @@
     <title>Retam Mondal-Full Stack Developer</title>
     <link rel="stylesheet" href="output.css">
     <link rel="icon" type="image/svg+xml" href="Images/logo.svg"> #Favicon
+        <!-- Font Awesome CDN Link -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=computer" />
 </head>
 
 <body>
@@ -38,7 +40,7 @@
         <div id="opportunities" class="flex flex-col justify-start items-center lg:items-start mt-10 relative">
             <div class="gradient-background h-full aspect-square max-w-full"></div>
             <!-- Open to new opportunity  -->
-            <div class="animate-fade-in-up mb-8">
+            <div class="animate-fade-in-up">
                 <div  class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glow-card bg-(--surface-solid)">
                     <span class="inline-block h-2 w-4 bg-green-400 rounded-full animate-pulse "></span>
                     <p class="text-sm text-(--text-3)">Open to New Opportunities</p>
@@ -46,7 +48,7 @@
             </div>
         
             <!-- Retam + Description  -->
-            <div class="mb-10 animate-fade-in-up">
+            <div class="mb-10 animate-fade-in-up mt-8">
                 <h1 class="text-5xl md:text-6xl mb-10 text-center lg:text-start leading-tight">
                     <p class="font-serif">Architecting <br> Scalable Code &</p>
                     <p class="font-serif text-(--accent)">Applied AI</p>
@@ -120,36 +122,82 @@
 <div class="border-b border-(--border-subtle)"></div>
 
     <!-- Tech Stack  -->
-    <section id="tech-stack">
-        <div class="pt-20 pb-20">
-            <h2 class="uppercase text-(--text-3) text-sm tracking-widest">Tech Stack</h2>
-            
-            <!-- Frontend, Backend, Devops  -->
-            <div class="flex gap-3 items-center mt-6 overflow-x-auto pb-3">
-                <p class="text-xs text-(--text-4)">FrontEnd</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">React</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Next.js</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">TypeScript</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Tailwind CSS</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Framer Motion</p>
-                
-                <p class="text-xs text-(--text-4)">|</p>
-                <p class="text-xs text-(--text-4)">BackEnd</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Node.js</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Express</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">PostgreSQL</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Prisma ORM</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Redis</p>                    
-                
-                <p class="text-xs text-(--text-4)">|</p>
-                <p class="text-xs text-(--text-4)">DevOPS</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Docker</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">AWS</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Vercel</p>
-                <p class="text-s text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">GitHub CI/CD</p>
-                
-                
+    <section id="tech-stack" class="pt-20 pb-20">
+        <div class="flex flex-col md:flex-row md:justify-between gap-5 pb-7 md:pb-20">
+            <div class="text-nowrap">
+                <h2 class="uppercase text-(--accent) text-xs tracking-widest pb-4">Tech Stack</h2>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl text-(--text-1)">Engineered for <br> Speed & Scale</h2>
             </div>
+            <div class="flex items-end">
+                <p class="max-w-[500px] lg:max-w-lg md:max-w-[400px] text-start md:text-end text-sm md:text-base text-(--text-3) leading-relaxed ">Precision stack curated for deterministic performance, high-load microservices, and reactive user interfaces.</p>
+            </div>
+        </div>
+        <!-- Skills stack  -->
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,500px))] md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3 w-ful">
+            <div class="bg-(--surface-solid) border border-(--accent-dim) rounded-xl p-7">
+                <p class="flex items-center justify-start gap-3 text-(--accent) mb-7 text-base font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 212, 59)" d="M380.8 96C372.7 110.1 368 126.5 368 144L368 160L96 160L96 384L368 384L368 448L96 448C60.7 448 32 419.3 32 384L32 160C32 124.7 60.7 96 96 96L380.8 96zM368 496C368 513.5 372.7 529.9 380.8 544L152 544C138.7 544 128 533.3 128 520C128 506.7 138.7 496 152 496L368 496zM464 96L560 96C586.5 96 608 117.5 608 144L608 496C608 522.5 586.5 544 560 544L464 544C437.5 544 416 522.5 416 496L416 144C416 117.5 437.5 96 464 96zM488 160C474.7 160 464 170.7 464 184C464 197.3 474.7 208 488 208L536 208C549.3 208 560 197.3 560 184C560 170.7 549.3 160 536 160L488 160zM488 256C474.7 256 464 266.7 464 280C464 293.3 474.7 304 488 304L536 304C549.3 304 560 293.3 560 280C560 266.7 549.3 256 536 256L488 256zM544 400C544 382.3 529.7 368 512 368C494.3 368 480 382.3 480 400C480 417.7 494.3 432 512 432C529.7 432 544 417.7 544 400z"/></svg>
+                    FrontEnd Architecture
+                </p>
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">React 19</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Next.js 15</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">TypeScript</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Tailwind CSS</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Framer Motion</p>
+                </div>
+            </div>
+            <div class="bg-(--surface-solid) border border-(--accent-dim) rounded-xl p-7">
+                <p class="flex items-center justify-start gap-3 text-(--accent) mb-7 text-base font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 212, 59)" d="M544 269.8C529.2 279.6 512.2 287.5 494.5 293.8C447.5 310.6 385.8 320 320 320C254.2 320 192.4 310.5 145.5 293.8C127.9 287.5 110.8 279.6 96 269.8L96 352C96 396.2 196.3 432 320 432C443.7 432 544 396.2 544 352L544 269.8zM544 192L544 144C544 99.8 443.7 64 320 64C196.3 64 96 99.8 96 144L96 192C96 236.2 196.3 272 320 272C443.7 272 544 236.2 544 192zM494.5 453.8C447.6 470.5 385.9 480 320 480C254.1 480 192.4 470.5 145.5 453.8C127.9 447.5 110.8 439.6 96 429.8L96 496C96 540.2 196.3 576 320 576C443.7 576 544 540.2 544 496L544 429.8C529.2 439.6 512.2 447.5 494.5 453.8z"/></svg>                    
+                    BackEnd & Distributed
+                </p>
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Python(FastAPI 15)</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Node.js</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">PostgreSQL</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Redis</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Prisma ORM</p>
+                </div>
+            </div>
+            <div class="bg-(--surface-solid) border border-(--accent-dim) rounded-xl p-7">
+                <p class="flex items-center justify-start gap-3 text-(--accent) mb-7 text-base font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 212, 59)" d="M419 375L223.3 333.7L215.1 373L410.8 414L419 375zM470 288L316.5 159.7L291 190.5L444.5 318.8L470 288zM438.8 327.7L257.5 243L240.8 279.5L422 364L438.8 327.7zM390.3 96L358.3 120L477.6 280.3L509.6 256.3L390.3 96zM410.8 424L210.8 424L210.8 463.7L410.8 463.7L410.8 424zM450.5 504L171 504L171 384L131 384L131 544L490.5 544L490.5 384L450.5 384L450.5 504z"/></svg>
+                    Applied AI & Fintech
+                </p>
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">LangChain</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Vector DBs</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">Stripe Core</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">PyTorch Basics</p>
+                    <p class="font-mono bg-(--accent-dim) inline-block px-3 py-1 rounded-full text-xs tracking-widest">AWS Lambda</p>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Frontend, Backend, Devops  -->
+        <div class="flex gap-3 items-center mt-10 overflow-x-auto pb-3">
+            <p class="text-xs text-(--text-4)">FrontEnd</p>
+
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Tailwind CSS</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Framer Motion</p>
+            
+            <p class="text-xs text-(--text-4)">|</p>
+            <p class="text-xs text-(--text-4)">BackEnd</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Node.js</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Express</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">PostgreSQL</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Prisma ORM</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Redis</p>                    
+            
+            <p class="text-xs text-(--text-4)">|</p>
+            <p class="text-xs text-(--text-4)">DevOPS</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Docker</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">AWS</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">Vercel</p>
+            <p class="text-xs flex items-center justify-center font-mono tracking-widest text-(--text-2) py-1 px-4 border rounded-full border-(--border) bg-(--surface-solid) hover:text-(--accent) hover:border-(--accent-border) whitespace-nowrap transition-all duration-200 cursor-default">GitHub CI/CD</p>  
+        </div>
         </div>
     </section>
 
